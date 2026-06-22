@@ -128,6 +128,25 @@ Para poder hacerlo nos dirigiremos al directorio /tmp que tiene permisos de escr
 
 
 Lo creamos con Echo y le damos permisos de ejecución. Después añadimos el directorio que contiene nuestro archivo date (En nuestro caso /tmp) al comienzo de PATH para que lo encuentre antes que /bin/date.
+Y ejecutamos teaParty, automáticamente carga nuestro archivo data y se nos abre una shell como hatter.
 
 ![path2](./images/image17.png)
+
+Nos dirigimos al directorio de hatter y encontramos una contraseña.
+
+![path3](./images/image16.png)
+
+Probamos de conectarnos por SSH y funciona.
+
+## Escalada de privilegios (Hatter/root)
+
+Una vez conectados como hatter intentamos buscar escalada con sudo y no es posible, tampoco con binarios SUID, no encontramos nada hasta que miramos las capabilities, ahí si encontramos algo interesante.
+
+### Escalada con capabilities
+
+Podremos aprovecharnos de una mala configuración en perl para subir privilegios porque tiene capacidades setuid igual que teaParty.
+
+Para poder realizar la escalada nos dirigiremos a la página de GTFOBins para que nos enseñe como hacerlo.
+
+![path4](./images/image3.png)
 
