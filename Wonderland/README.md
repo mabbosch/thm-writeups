@@ -38,3 +38,6 @@ Usamos Gobuster y nos encuentra el directorio /img que ya sabíamos y un directo
 
 
 Nos dirigimos al navegador para ver que hay y nos encontramos una página con un mensaje.
+
+![web3](./images/image23.png)
+
