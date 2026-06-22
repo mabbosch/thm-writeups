@@ -41,3 +41,10 @@ Nos dirigimos al navegador para ver que hay y nos encontramos una página con un
 
 ![web3](./images/image23.png)
 
+La página nos dice que continuemos adelante, parece ser una pista, quizás lo que quiere es que sigamos buscando directorios, volveremos a hacer fuzzing pero esta vez con dirb, que nos muestra otro directorio llamado /a.
+Una vez más nos dice que continuemos, seguimos buscando directorios y navegando por páginas que nos invitan a continuar buscando. Las páginas siguen una conversación entre alice y el gato. y los directorios siguen un patrón, todos ellos forman la palabra /r/a/b/b/i/t/
+Por fin llegamos al último. ¡La puerta para entrar en wonderland!
+
+![web4](./images/image30.png)
+
+
