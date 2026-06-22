@@ -15,4 +15,5 @@ Después de montar el laboratorio y conectarnos por VPN empezaremos su explotaci
 Empezamos la fase de reconocimiento de puertos con nmap.
 
 Nmap nos reporta dos puertos abiertos, el 22 (SSH) y el http (HTTP).
-![nmap](Wonderland/images/image1.png)
+
+![nmap](./images/image1.png)
