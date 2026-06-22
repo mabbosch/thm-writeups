@@ -150,3 +150,24 @@ Para poder realizar la escalada nos dirigiremos a la página de GTFOBins para qu
 
 ![path4](./images/image3.png)
 
+En la web nos muestran un comando que podemos usar, en nuestro caso la ruta será /usr/bin/perl el comando nos dice:
+
+use POSIX (setuid) : Declara que estamos usando setuid.
+
+POSIX::setuid(0): Se establece el id del usuario como root (0)
+
+exec "/bin/bash": Se ejecuta una shell Bash.
+
+Una vez ejecutado el comando automáticamente nos convertimos en root.
+
+![root1](./images/image5.png)
+
+Vamos al directorio de root y encontramos sorprendentemente la flag de usuario.
+
+![root2](./images/image25.png)
+
+Y la flag de root estaba en el directorio de Alice que con sus permisos no podíamos leer y ahora como root si podemos hacerlo.
+
+![root3](./images/image20.png)
+
+
