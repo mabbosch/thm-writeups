@@ -93,3 +93,32 @@ Ya tenemos un password y nos podemos conectar por SSH allí encontramos la flag 
 ![ssh](./images/image10.png)
 
 
+### Post-explotación (Escalada)
+
+Para escalar privilegios y convertirnos en root primero utilizaremos el comando sudo -l para ver si nuestro usuario meliodas tiene algún privilegio.
+
+![sudo1](./images/image8.png)
+
+
+Meliodas puede ejecutar el comando bak.py como root, es el script que nos encontramos en el directorio de su usuario.
+
+![sudo2](./images/image6.png)
+
+
+Como no tenemos permiso para escribir en él quizás podemos borrarlo y volver a escribirlo para escalar privilegios.
+
+Borramos el script.
+
+Después crearemos un script nuevo con el mismo nombre que nos abra una shell en bash como root.
+
+![sudo3](./images/image4.png)
+
+
+Y finalmente ejecutaremos el script con nuestra ruta del binario como root.
+
+![sudo4](./images/image9.png)
+
+
+Ya somos root y ya tenemos nuestra última flag!.
+
+
