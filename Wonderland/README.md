@@ -47,4 +47,41 @@ Por fin llegamos al último. ¡La puerta para entrar en wonderland!
 
 ![web4](./images/image30.png)
 
+Si la web dice que es la puerta de entrada debe ser porque algo esconde, miramos los recursos de la página y encontramos la contraseña de Alice.
+
+![web5](./images/image11.png)
+
+## Alice (SSH)
+
+Intentaremos conectarnos por SSH con esas credenciales. Funciona
+
+![ssh](./images/image22.png)
+
+En la máquina somos Alice y estamos en su directorio, cuando listamos sus archivos vemos que existe un archivo root.txt al que no tenemos acceso, de momento ni rastro de la flag de usuario.
+
+En su directorio hay un script en python llamado walrus_and_the_carpenter.py, le echamos un vistazo y vemos que se trata de una poema, el script lo que hace es coger una línea aleatoria del poema y la muestra en pantalla.
+
+![scr](./images/image18.png)
+
+## Escalada de privilegios (Alice/Rabbit)
+
+Ahora usaremos el comando sudo -l para ver qué privilegios tiene nuestro usuario Alice.
+
+Nuestro usuario puede ejecutar el comando /usr/bin/python3.6 /home/alice/walrus_and_the_carpenter.py como usuario rabbit.
+
+![sudo](./images/image9.png)
+
+### Python Library Hijacking
+
+Informándonos sobre el tema hemos encontrado una técnica llamada Python Library Hijacking que es el secuestro de una biblioteca de python se trata de manipular o suplantar una biblioteca o módulo para que puedas ejecutar comandos en el sistema a través de un script, como nosotros podemos ejecutar el script como rabbit nos servirá.
+
+https://bypasseados.com/posts/python-library-hijacking-linux/
+
+Lo primero es mirar los permisos que tenemos con el script, solo tenemos permisos de lectura así que no podremos manipular el script, lo siguiente será ver el orden de prioridad en PATH de Python para ello usaremos el comando;
+
+`python3 -c 'import sys; print(sys.path)'`
+
+![sudo1](./images/image26.png)
+
+
 
