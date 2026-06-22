@@ -109,5 +109,25 @@ Cargamos el archivo en el programa y lo abrimos con Code Browser, nos dirigimos 
 
 ![ghy1](./images/image21.png)
 
+Logramos ver el número identificador de usuario, se trata de 0x3eb que está en Hexadecimal en decimal sería 1003, lo buscamos en /etc/passwd y vemos que se trata del usuario Hatter.
 
+![ghy2](./images/image12.png)
+
+
+También vemos que el error de segmentación no es real y que para mostrar la fecha y hora se dirige a un programa externo llamado date, aunque no se especifica la ruta cosa que nos beneficia ya que en lugar de ir a buscar directamente la ruta lo buscara por todo el sistema basándose en la variable de entorno PATH.
+
+![ghy3](./images/image7.png)
+
+### Manipulación del PATH
+
+Visto esto, e igual que hicimos con el poema de Alice, podemos crear nuestro propio archivo date y agregar nuestro directorio a la variable de entorno PATH para que encuentre el nuestro primero y lo ejecute.
+
+Para poder hacerlo nos dirigiremos al directorio /tmp que tiene permisos de escritura para todos, y crearemos nuestro propio date.
+
+![path1](./images/image28.png)
+
+
+Lo creamos con Echo y le damos permisos de ejecución. Después añadimos el directorio que contiene nuestro archivo date (En nuestro caso /tmp) al comienzo de PATH para que lo encuentre antes que /bin/date.
+
+![path2](./images/image17.png)
 
