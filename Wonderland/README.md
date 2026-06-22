@@ -83,5 +83,31 @@ Lo primero es mirar los permisos que tenemos con el script, solo tenemos permiso
 
 ![sudo1](./images/image26.png)
 
+Lo que nos muestra es que el primer directorio donde buscará el módulo será el directorio de trabajo actual, por tanto si creamos un random.py a la hora de buscar la librería, el script encontrará el nuestro primero y lo importara. Este archivo contendrá un script que nos abrirá una shell como rabbit.
+
+![py1](./images/image19.png)
+
+
+Ejecutamos el comando, y ya somos rabbit.
+
+![py2](./images/image6.png)
+
+## Escalada de privilegios (Rabbit/Hatter)
+
+Una vez como usuario rabbit nos dirigimos a su directorio y encontramos un archivo llamado teaParty, usamos file para saber de qué tipo de archivo se trata.
+
+Se trata de un binario ELF con atributos setuid que permiten que el programa se ejecute con los privilegios del propietario, esto es interesante pq puede significar que podamos escalar privilegios con el. Ejecutamos el archivo y nos aparece un mensaje que nos dice que Mad hatter estará aquí pronto y nos indica una hora y dia,cuando pulsamos enter nos devuelve un error de segmentación.
+
+![py3](./images/image10.png)
+
+
+### Análisis con Ghidra
+
+Como el programa nos parece una herramienta interesante para la escalada de privilegios nos la llevaremos a nuestra máquina para realizar un análisis más exhaustivo con Ghydra, Ghydra es un programa para analizar binarios y descompilarlos para entender cómo funcionan.
+
+Cargamos el archivo en el programa y lo abrimos con Code Browser, nos dirigimos a la función main y analizamos con el decompiler.
+
+![ghy1](./images/image21.png)
+
 
 
