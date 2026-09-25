@@ -1,9 +1,7 @@
 
 # Ignite (Tryhackme)
 
-Creado: 26 de noviembre de 2024 13:37
 
-## Ignite (Tryhackme)
 
 ### Reconocimiento
 
