@@ -83,6 +83,6 @@ Nos dirigimos al archivo de configuración y encontramos un database.php que nos
 
 ![](images/image7.png)
 
-Con las credenciales ya podemos convertirnos en root y leer la flag. Máquina powneada.
+Con las credenciales ya podemos convertirnos en root y leer la flag. 
 
 ![](Ignite%20(Tryhackme)/image6.png)
